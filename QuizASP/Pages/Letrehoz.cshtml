@@ -1,0 +1,81 @@
+﻿@page
+@model QuizASP.Pages.LetrehozModel
+@{
+    ViewData["Title"] = "Kérdés felvétele";
+}
+<br />
+
+
+<div class="border container bg-dark" style="padding:30px;">
+    <h2 class="text-info">Kérdés felvétele</h2>
+    <br />
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-3 text-light">
+                <label asp-for="Uj.Kerdes"><h3><strong>Kérdés</strong></h3></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Uj.Kerdes" class="form-control" />
+            </div>
+            <span asp-validation-for="Uj.Kerdes" class="text-warning"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 text-light">
+                <label asp-for="Uj.Valasz_A"><h3><strong>'A' válasz</strong></h3></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Uj.Valasz_A" class="form-control" />
+            </div>
+            <span asp-validation-for="Uj.Valasz_A" class="text-warning"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 text-light">
+                <label asp-for="Uj.Valasz_B"><h3><strong>'B' válasz</strong></h3></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Uj.Valasz_B" class="form-control" />
+            </div>
+            <span asp-validation-for="Uj.Valasz_B" class="text-warning"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 text-light">
+                <label asp-for="Uj.Valasz_C"><h3><strong>'C' válasz</strong></h3></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Uj.Valasz_C" class="form-control" />
+            </div>
+            <span asp-validation-for="Uj.Valasz_C" class="text-warning"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 text-light">
+                <label asp-for="Uj.Valasz_D"><h3><strong>'D' válasz</strong></h3></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Uj.Valasz_D" class="form-control" />
+            </div>
+            <span asp-validation-for="Uj.Valasz_D" class="text-warning"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 text-light">
+                <label asp-for="Uj.Helyes"><h3><strong>Helyes válasz</strong></h3></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Uj.Helyes" class="form-control" />
+            </div>
+            <span asp-validation-for="Uj.Helyes" class="text-warning"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Létrehozás" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-success form-control">Vissza a kérdésekhez</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
